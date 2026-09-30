@@ -59,7 +59,7 @@
                             <span class="menu-title">Users</span>
                         </a>
                     </div>
-                    <div class="menu-item">
+                    <!-- <div class="menu-item">
                         <a class="menu-link" href="{{ route('admin.role-permission.index') }}">
                             <span class="menu-icon">
                                 <i class="bi bi-person-lines-fill fs-2"></i>
@@ -74,7 +74,7 @@
                             </span>
                             <span class="menu-title">Permissions</span>
                         </a>
-                    </div>
+                    </div> -->
                     <div class="menu-item pt-2">
                         <div class="menu-content">
                             <span class="menu-heading fw-bold text-uppercase fs-7">Label</span>
