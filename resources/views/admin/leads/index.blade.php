@@ -119,7 +119,7 @@
                                                 <th>Contact</th>
                                                 <th>Product</th>
                                                 <th>Size / Qty</th>
-                                                <th>Message</th>
+                                                <!-- <th>Message</th> -->
                                                 <th>Status</th>
                                                 <th>Date</th>
                                                 <th class="text-end">Actions</th>
@@ -168,11 +168,11 @@
                                                             <span class="text-muted">-</span>
                                                         @endif
                                                     </td>
-                                                    <td>
+                                                    <!-- <td>
                                                         <div class="text-truncate" style="max-width: 180px;" title="{{ $lead->message ?? '' }}">
                                                             {{ $lead->message ?? '-' }}
                                                         </div>
-                                                    </td>
+                                                    </td> -->
                                                     <td>
                                                         @php
                                                             $status = $lead->status ?? 'New';
