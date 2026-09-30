@@ -35,9 +35,12 @@ class DataForSEOCostingController extends Controller
                             Mail::send('mail-templates.dataforseo-low-balance', [
                                 'balance' => $balance,
                                 'login' => $result['login'] ?? $login
-                            ], function ($message) {
-                                $message->to('sumit@aquilmedia.in');
-                                $message->subject('Alert: DataForSEO Available Credit is Low');
+                            ], function ($message) use ($admin) {
+                                $recipient = $admin->email ?? config('mail.from.address');
+                                if ($recipient) {
+                                    $message->to($recipient);
+                                    $message->subject('Alert: DataForSEO Available Credit is Low');
+                                }
                             });
 
                             Admin::query()->update(['is_mail_send_dataforseo' => true]);

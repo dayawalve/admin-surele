@@ -113,7 +113,7 @@
             <!-- HEADER -->
             <tr>
                 <td class="header">
-                    <h1>🎉 Welcome to Aquil Task Manager</h1>
+                    <h1>🎉 Welcome to {{ $company->company_name ?? 'Surele' }}</h1>
                 </td>
             </tr>
 
@@ -142,7 +142,7 @@
                     <p style="margin-top:22px;">
                         Regards,<br>
                         <strong style="color:#640da3;">
-                            {{ $company->company_name ?? 'Aquil Task Manager' }}
+                            {{ $company->company_name ?? 'Surele' }}
                         </strong><br>
                         <span style="color:#777777;">Team</span>
                     </p>
@@ -153,7 +153,7 @@
             <!-- FOOTER -->
             <tr>
                 <td class="footer">
-                    © {{ date('Y') }} {{ $company->company_name ?? 'Aquil Task Manager' }}. All rights reserved.
+                    © {{ date('Y') }} {{ $company->company_name ?? 'Surele' }}. All rights reserved.
                 </td>
             </tr>
 

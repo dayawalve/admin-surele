@@ -74,7 +74,7 @@ class EmployeeController extends Controller
         Mail::send('mail-templates.onboard', compact('student', 'plainPassword'),
             function ($message) use ($student) {
                 $message->to($student->email);
-                $message->subject('Welcome to Aquil Task Manager');
+                $message->subject('Welcome to Surele Task Manager');
             }
         );
 

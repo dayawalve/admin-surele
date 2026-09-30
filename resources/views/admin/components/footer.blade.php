@@ -4,7 +4,7 @@
         <!--begin::Copyright-->
         <div class="text-dark order-2 order-md-1">
             <span class="text-muted fw-semibold me-1">{{now()->format('Y')}}©</span>
-            <a href="#" class="text-gray-800 text-hover-primary">{{ config('app.name', 'Aquil-CRM') }}</a>
+            <a href="#" class="text-gray-800 text-hover-primary">{{ config('app.name', 'Surele') }}</a>
         </div>
         <!--end::Copyright-->
         <!--begin::Menu-->

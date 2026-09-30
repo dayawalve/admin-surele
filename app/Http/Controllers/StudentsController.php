@@ -139,8 +139,8 @@ class StudentsController extends Controller
         Mail::send('mail-templates.student-enroll', compact('student', 'paymentData'),
             function ($message) use ($student, $request) {
                 $subject = $request->enrollment_type === 'instant'
-                    ? 'Enrollment & Payment Confirmation - Aquil Tech Labs'
-                    : 'Enrollment Confirmation - Aquil Tech Labs';
+                    ? 'Enrollment & Payment Confirmation - Surele'
+                    : 'Enrollment Confirmation - Surele';
 
                 $message->to($student->email)->subject($subject);
             }
@@ -485,7 +485,7 @@ class StudentsController extends Controller
     //     Mail::send('mail-templates.payment-received', compact('paymentMailData'),
     //         function ($message) use ($student) {
     //             $message->to($student->email);
-    //             $message->subject('Payment Received Confirmation - Aquil Tech Labs');
+    //             $message->subject('Payment Received Confirmation - Surele');
     //     });
 
 
@@ -547,7 +547,7 @@ class StudentsController extends Controller
 
         Mail::send('mail-templates.payment-received', compact('paymentMailData'), function ($message) use ($student, $pdf, $fileName) {
             $message->to($student->email);
-            $message->subject('Payment Received Confirmation - Aquil Tech Labs');
+            $message->subject('Payment Received Confirmation - Surele');
             $message->attachData($pdf->output(), $fileName);
         });
 
@@ -617,7 +617,7 @@ class StudentsController extends Controller
             compact('offerMailData'),
             function ($message) use ($student, $pdf, $fileName) {
                 $message->to($student->email);
-                $message->subject('Offer Letter from Aquil Tech Labs');
+                $message->subject('Offer Letter from ' . ($company->company_name ?? 'Surele'));
                 $message->attachData($pdf->output(), $fileName);
             }
         );

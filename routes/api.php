@@ -8,6 +8,14 @@ use App\Http\Controllers\Api\AuthController;
 
 Route::post('/login', [AuthController::class, 'login']);
 
+use App\Http\Controllers\Api\EnquiryController;
+
+// Public Frontend Form Submission API
+Route::post('/enquiry', [EnquiryController::class, 'store']);
+Route::post('/enquiries', [EnquiryController::class, 'store']);
+Route::post('/leads', [EnquiryController::class, 'store']);
+Route::post('/submit-enquiry', [EnquiryController::class, 'store']);
+
 Route::get('/get-basic-settings', [CommonController::class, 'getBasicSettings']);
 Route::get('/get-all-domains', [CommonController::class, 'getAllDomains']);
 Route::get('/auto-logged-out', [CommonController::class, 'autoLogoutAll']);

@@ -4,7 +4,7 @@
  * Laravel - A PHP Framework For Web Artisans
  *
  * @package  Laravel
- * @author   Daya Walve <daya@aquilmedia.in>
+ * @author   Daya Walve
  */
 
 $uri = urldecode(

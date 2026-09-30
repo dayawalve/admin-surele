@@ -31,6 +31,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 Route::get('send-mail',function() {
-    $data['email'][0] = 'daya@aquilmedia.in';
+    $data['email'][0] = config('mail.from.address') ?? 'info@surele.in';
     dispatch(new App\Jobs\SendEmailJob($data));
 });

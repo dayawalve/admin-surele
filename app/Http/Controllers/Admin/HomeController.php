@@ -21,9 +21,9 @@ class HomeController extends Controller
     public function index()
     {
         $totalAdmins = Admin::count();
-        $totalLeads = \Illuminate\Support\Facades\Schema::hasTable('leads') 
-            ? DB::table('leads')->count() 
-            : 0;
+        $totalLeads = \Illuminate\Support\Facades\Schema::hasTable('enquiries')
+            ? DB::table('enquiries')->count()
+            : (\Illuminate\Support\Facades\Schema::hasTable('leads') ? DB::table('leads')->count() : 0);
 
         return view('admin.index', compact('totalAdmins', 'totalLeads'));
     }

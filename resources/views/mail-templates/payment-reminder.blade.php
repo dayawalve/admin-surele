@@ -156,7 +156,7 @@
 
                     <p>
                         Regards,<br>
-                        <strong style="color:#640da3;">Aquil Tech Labs</strong><br>
+                        <strong style="color:#640da3;">Surele</strong><br>
                         Accounts Team
                     </p>
 
@@ -166,7 +166,7 @@
             <!-- FOOTER -->
             <tr>
                 <td class="footer">
-                    © {{ date('Y') }} Aquil Tech Labs. All rights reserved.
+                    © {{ date('Y') }} Surele. All rights reserved.
                 </td>
             </tr>
 

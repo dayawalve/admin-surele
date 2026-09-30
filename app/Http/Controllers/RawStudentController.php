@@ -70,7 +70,7 @@ class RawStudentController extends Controller
             'student' => $student
         ], function ($mail) use ($student) {
             $mail->to($student->email);
-            $mail->subject('Join Aquil Industrial Program – Aquil Techlab');
+            $mail->subject('Join Industrial Program – Surele');
         });
 
         $student->update([

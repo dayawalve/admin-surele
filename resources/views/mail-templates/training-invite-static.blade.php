@@ -6,7 +6,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Invitation to Join Aquil Industrial Program</title>
+    <title>Invitation to Join {{ $company->company_name ?? 'Surele' }} Industrial Program</title>
 
     <style>
         body {
@@ -125,7 +125,7 @@
                     @if ($student->job_assurance)
                         <p>
                             We would like to invite you to join our
-                            <strong>Aquil Industrial Program</strong> in
+                            <strong>{{ $company->company_name ?? 'Surele' }} Industrial Program</strong> in
                             <strong>{{ $student->preferred_technology ?? 'IT Technologies' }}</strong>,
                             designed with real-time projects, expert mentorship, and
                             <span class="highlight">placement & career support</span> to help you start your IT career.
@@ -133,7 +133,7 @@
                     @else
                         <p>
                             We would like to invite you to join our
-                            <strong>Aquil Industrial Program</strong> in
+                            <strong>{{ $company->company_name ?? 'Surele' }} Industrial Program</strong> in
                             <strong>{{ $student->preferred_technology ?? 'IT Technologies' }}</strong>,
                             focused on <span class="highlight">practical training and real-time industry projects</span>
                             to build strong technical skills.
@@ -160,8 +160,8 @@
 
                     <p>
                         If you have any questions, feel free to contact us at
-                        <a href="mailto:contact@aquilmedia.in" style="color:#640da3; text-decoration:none;">
-                            contact@aquilmedia.in
+                        <a href="mailto:{{ $company->company_email ?? 'contact@surele.in' }}" style="color:#640da3; text-decoration:none;">
+                            {{ $company->company_email ?? 'contact@surele.in' }}
                         </a>
                         — we’ll be happy to assist you.
                     </p>
