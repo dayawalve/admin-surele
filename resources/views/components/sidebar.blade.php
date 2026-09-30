@@ -1,12 +1,12 @@
 <div id="kt_app_sidebar" class="app-sidebar flex-column" data-kt-drawer="true" data-kt-drawer-name="app-sidebar"
     data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="225px"
     data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
-    <div class="app-sidebar-logo px-6">
-        <a href="{{ route('dashboard') }}">
-            <img alt="Logo" src="{{ url('/') }}/public/custom-img/sidebar.png"
-                class="img-fluid app-sidebar-logo-default" />
-            <img alt="Logo" src="{{ url('/') }}/public/custom-img/28x28.png"
-                class="h-30px app-sidebar-logo-minimize" />
+    <div class="app-sidebar-logo px-4 d-flex align-items-center justify-content-center position-relative">
+        <a href="{{ route('dashboard') }}" class="d-flex align-items-center justify-content-center w-100">
+            <img alt="Surele Logo" src="{{ url('/') }}/public/custom-img/surele_logo.svg?v=5"
+                class="app-sidebar-logo-default" style="height: 48px; max-width: 165px; width: auto; object-fit: contain;" />
+            <img alt="Surele Logo" src="{{ url('/') }}/public/custom-img/surele_icon.png?v=5"
+                class="h-25px app-sidebar-logo-minimize" />
         </a>
         <div id="kt_app_sidebar_toggle"
             class="app-sidebar-toggle btn btn-icon btn-shadow btn-sm btn-color-muted btn-active-color-primary h-30px w-30px position-absolute top-50 start-100 translate-middle rotate"

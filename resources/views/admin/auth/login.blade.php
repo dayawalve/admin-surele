@@ -14,8 +14,7 @@
                 <div class="d-flex flex-center w-lg-50 pt-15 pt-lg-0 px-10">
                     <div class="d-flex flex-center flex-lg-start flex-column">
                         <a href="#" class="mb-7">
-                            <img alt="Logo" src="{{ url('/') }}/public/custom-img/light.svg" width="300px"
-                                height="100px" />
+                            <img alt="Surele Logo" src="{{ url('/') }}/public/custom-img/light.svg?v=5" style="max-width: 320px; width: 100%; height: auto;" />
                         </a>
                     </div>
                 </div>

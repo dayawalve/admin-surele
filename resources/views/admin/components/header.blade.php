@@ -13,7 +13,7 @@
         </div>
         <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
             <a href="" class="d-lg-none">
-                <img alt="Logo" src="{{ url('/') }}/public/custom-img/28x28.png" class="h-30px" />
+                <img alt="Surele Logo" src="{{ url('/') }}/public/custom-img/surele_icon.png?v=1" class="h-30px" />
             </a>
         </div>
         <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1" id="kt_app_header_wrapper">

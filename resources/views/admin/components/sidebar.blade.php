@@ -7,14 +7,12 @@
         return !is_numeric($value);
     });
     @endphp
-    <div class="app-sidebar-logo px-6">
-        <a href="{{ route('admin.index') }}">
-            <div style="display: flex; align-items: center;">
-                <img alt="Logo" src="{{ url('/') }}/public/custom-img/Logo-Horizontal-White.png"
-                    class="img-fluid app-sidebar-logo-default" style="margin-right: 10px;" />
-                {{-- <img alt="Logo" src="{{ url('/') }}/public/custom-img/laravel.svg"
-                    class="img-fluid app-sidebar-logo-default" /> --}}
-            </div>
+    <div class="app-sidebar-logo px-4 d-flex align-items-center justify-content-center position-relative">
+        <a href="{{ route('admin.index') }}" class="d-flex align-items-center justify-content-center w-100">
+            <img alt="Surele Logo" src="{{ url('/') }}/public/custom-img/surele_logo.svg?v=5"
+                class="app-sidebar-logo-default" style="height: 58px; max-width: 175px; width: auto; object-fit: contain;" />
+            <img alt="Surele Logo" src="{{ url('/') }}/public/custom-img/surele_icon.png?v=5"
+                class="h-35px app-sidebar-logo-minimize" />
         </a>        
         <div id="kt_app_sidebar_toggle"
             class="app-sidebar-toggle btn btn-icon btn-shadow btn-sm btn-color-muted btn-active-color-primary h-30px w-30px position-absolute top-50 start-100 translate-middle rotate"
