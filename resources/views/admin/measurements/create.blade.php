@@ -1,0 +1,133 @@
+<x-admin-layout>
+    @section('content')
+        <div class="d-flex flex-column flex-column-fluid">
+            <div class="app-toolbar py-3 py-lg-6">
+                <div class="app-container container-fluid d-flex flex-stack">
+                    <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Add Measurements</h1>
+                </div>
+            </div>
+            <div class="app-content flex-column-fluid">
+                <div class="app-container container-fluid">
+                    <div class="d-flex flex-column-fluid">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card mb-5 mb-xl-10">
+                                        <div id="kt_account_settings_profile_details" class="collapse show">
+                                            <form class="form" action="{{ route('admin.measurements.store') }}" method="POST"
+                                                enctype="multipart/form-data" id="FormId">
+                                                @csrf
+                                                <div class="card-body border-top p-9">
+                                                    <div class="row mb-6">
+                                                        <label
+                                                            class="col-lg-4 col-form-label fw-semibold fs-6">Avatar</label>
+                                                        <div class="col-lg-8">
+                                                            <div class="image-input image-input-outline"
+                                                                data-kt-image-input="true"
+                                                                style="background-image: url('{{ asset('public/custom-img/blank.png') }}')">
+                                                                <div class="image-input-wrapper w-125px h-125px"
+                                                                    style="background-image: url('{{ asset('public/custom-img/blank.png') }}')">
+                                                                </div>
+                                                                <label
+                                                                    class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                                                    data-kt-image-input-action="change"
+                                                                    data-bs-toggle="tooltip" title="Change avatar">
+                                                                    <i class="ki-duotone ki-pencil fs-7">
+                                                                        <span class="path1"></span>
+                                                                        <span class="path2"></span>
+                                                                    </i>
+                                                                    <input type="file" name="profile_image" class="imgVal"
+                                                                        accept=".png,.jpg,.jpeg"/>
+                                                                </label>
+                                                                <span
+                                                                    class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                                                    data-kt-image-input-action="cancel"
+                                                                    data-bs-toggle="tooltip" title="Cancel avatar">
+                                                                    <i class="ki-duotone ki-cross fs-2">
+                                                                        <span class="path1"></span>
+                                                                        <span class="path2"></span>
+                                                                    </i>
+                                                                </span>
+                                                            </div>
+                                                            <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-6">
+                                                        <label
+                                                            class="col-lg-4 col-form-label required fw-semibold fs-6">Full
+                                                            Name</label>
+                                                        <div class="col-lg-8">
+                                                            <div class="row">
+                                                                <div class="col-lg-6">
+                                                                    <input type="text" data-bvalidator="required"
+                                                                        class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                                                                        name="fname" placeholder="Enter First Name" />
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <input type="text" data-bvalidator="required"
+                                                                        class="form-control form-control-lg form-control-solid"
+                                                                        name="lname" placeholder="Enter Last Name" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    {{-- <div class="row mb-6">
+                                                        <label
+                                                            class="col-lg-4 col-form-label required fw-semibold fs-6">Email
+                                                        </label>
+                                                        <div class="col-lg-8">
+                                                            <input type="text" name="email"
+                                                                class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                                                                placeholder="Enter email"
+                                                                data-bvalidator="required,email" />
+                                                        </div>
+                                                    </div> --}}
+                                                    <div class="row mb-6">
+                                                        <label
+                                                            class="col-lg-4 col-form-label required fw-semibold fs-6">Mobile
+                                                        </label>
+                                                        <div class="col-lg-8">
+                                                            <input type="number" name="number"
+                                                                class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                                                                placeholder="Enter Mobile Number"
+                                                                data-bvalidator="required" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-6">
+                                                        <label
+                                                            class="col-lg-4 col-form-label required fw-semibold fs-6">Address
+                                                        </label>
+                                                        <div class="col-lg-8">
+                                                            <input type="text" name="address"
+                                                                class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
+                                                                placeholder="Enter Address"
+                                                                data-bvalidator="required" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-footer d-flex justify-content-end py-6 px-9">
+                                                    <a href="{{ route('admin.measurements.index') }}"
+                                                        class="btn btn-light btn-active-light-primary me-2">Discard</a>
+                                                    <button type="submit" class="btn btn-primary"
+                                                        id="kt_account_profile_details_submit">Save</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endsection
+</x-admin-layout>
+<script type="text/javascript">
+    function passwordFormat(password) {
+        regex = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/); // number, a-z, A-Z, min 8 chars
+        if (regex.test(password))
+            return true;
+        return false;
+    }
+</script>
