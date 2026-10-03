@@ -90,6 +90,15 @@
                         </a>
                     </div>
 
+                    <div class="menu-item">
+                        <a class="menu-link {{ isset($route[1]) && $route[1] == 'blogs' ? 'active' : '' }}" href="{{ route('admin.blogs.index') }}">
+                            <span class="menu-icon">
+                                <i class="bi bi-journal-richtext fs-2"></i>
+                            </span>
+                            <span class="menu-title">Blogs</span>
+                        </a>
+                    </div>
+
                     {{-- <div class="menu-item">
                         <a class="menu-link {{ isset($route[1]) && $route[1] == 'employees' ? 'active' : '' }}" href="{{ route('admin.employees.index') }}">
                             <span class="menu-icon">

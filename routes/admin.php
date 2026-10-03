@@ -79,6 +79,9 @@ Route::prefix('admin')->group(static function () {
             Route::resource('ideal-time-reason', IdealTimeReasonController::class);
             Route::resource('basic-settings', BasicSettingController::class);
             Route::resource('leads', \App\Http\Controllers\Admin\LeadController::class);
+            Route::post('blogs/toggle-featured/{id}', [\App\Http\Controllers\Admin\BlogController::class, 'toggleFeatured'])->name('blogs.toggle-featured');
+            Route::post('blogs/toggle-status/{id}', [\App\Http\Controllers\Admin\BlogController::class, 'toggleStatus'])->name('blogs.toggle-status');
+            Route::resource('blogs', \App\Http\Controllers\Admin\BlogController::class);
             
             Route::get('brands/export-excel', [BrandsController::class, 'exportExcel'])->name('brands.export-excel');
             Route::post('brands/toggle-aeo/{id}', [BrandsController::class, 'toggleAeo'])->name('brands.toggle-aeo');

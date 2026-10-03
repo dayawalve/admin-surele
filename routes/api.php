@@ -16,6 +16,12 @@ Route::post('/enquiries', [EnquiryController::class, 'store']);
 Route::post('/leads', [EnquiryController::class, 'store']);
 Route::post('/submit-enquiry', [EnquiryController::class, 'store']);
 
+// Public Dynamic Blogs API for Website
+use App\Http\Controllers\Api\BlogController;
+Route::get('/blogs', [BlogController::class, 'index']);
+Route::get('/blogs/{slug}', [BlogController::class, 'show']);
+Route::get('/blog-categories', [BlogController::class, 'categories']);
+
 Route::get('/get-basic-settings', [CommonController::class, 'getBasicSettings']);
 Route::get('/get-all-domains', [CommonController::class, 'getAllDomains']);
 Route::get('/auto-logged-out', [CommonController::class, 'autoLogoutAll']);
